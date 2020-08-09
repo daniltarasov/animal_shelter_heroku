@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="list">
+    {% for animal in animals %}
+    <div class="rect">
+        <a href="/animals/{{animal.id}}">
+            {% if animal.photo %}
+            <img src="{{ animal.photo.url }}" height="200" width="200" alt="" class="beast_img">
+            {% endif %}
+        </a>
+        <div class="animal-descr">
+            {{animal.name}}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block title %}
+	<title>Питомцы приюта</title>  
+{% endblock %}

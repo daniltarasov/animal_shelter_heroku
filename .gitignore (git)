@@ -1,0 +1,10 @@
+venv
+.idea
+.vscode
+app.json
+deploy_heroku.bat
+Procfile
+requirements.txt
+runtime.txt
+deploy.bat
+.gitignore

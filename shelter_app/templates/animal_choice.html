@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="main-content">
+    <form action="/animals" method="get" enctype="multipart/form-data">
+        <input type="hidden" name="type" value="собака" />
+        <button class="btn  block block-text">
+            Собаки
+        </button>
+    </form>
+    <form action="/animals" method="get" enctype="multipart/form-data">
+        <input type="hidden" name="type" value="кошка" />
+        <button class="btn  block block-text">
+            Кошки
+        </button>
+    </form>
+    <form action="/animals" method="get" enctype="multipart/form-data">
+        <input type="hidden" name="type" value="попугай" />
+        <button class="btn  block block-text">
+            Попугаи
+        </button>
+    </form>
+
+</div>
+{% endblock %}
+
+{% block title %}
+	<title>Выбор вида</title>  
+{% endblock %}

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            {% block title %}
+            {% endblock %}
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+            <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+    </head>
+
+
+<body>
+	<div class="gen-wrapper">
+		<div class="cont-wrapper">
+			<div class="background-gray">
+				<header>
+					<a class="logo" href="/">
+	                    <div id="logo">
+	                        ПУШИСТИКИ
+	                    </div>
+	                </a>
+					<nav>
+						<a href="/animals/?type=собака">Собаки</a>
+						<a href="/animals/?type=кошка">Кошки</a>
+						<a href="/animals/?type=попугай">Попугаи</a>
+						<a href="/contacts">Контакты</a>
+					</nav>
+				</header>
+			</div>	
+			<main>
+					{% block content %}
+					{% endblock %}
+			</main>
+		</div>
+		<footer>
+				<div class="footer-wrapper">
+					<p>&copy; Пушистики </p>
+					<div class="icons">
+						<a href="#"><img src="{% static 'img/Twitter_Rounded.png' %}" alt="Twitter"></a>
+						<a href="#"><img src="{% static 'img/LinkedIn_Rounded.png' %}" alt="LinkedIn"></a>
+						<a href="#"><img src="{% static 'img/Google_Rounded.png' %}" alt="Google"></a>
+						<a href="#"><img src="{% static 'img/Facebook_Rounded.png' %}" alt="Facebook"></a>
+					</div>
+				</div>
+		</footer>
+	</div>
+</body>
+</html>
